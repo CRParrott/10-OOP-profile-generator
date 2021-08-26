@@ -46,7 +46,7 @@ function createTeam() {
         {
             type: 'list',
             name: 'teamRole',
-            message: "Please select engineer or intern",
+            message: "Please select engineer, intern, or no additional team members",
             choices: [
                 "Engineer",
                 "Intern",
@@ -61,6 +61,42 @@ function createTeam() {
             case "Intern":
                 addIntern();
                 break;
+            default:
+                createTeam();
         }
-    }
+    });
+}
+
+function createEngineer() {
+    console.log("Create and Engineer");
+
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'engineerName',
+            message: "Enter engineer's name"
+        },
+        {
+            type: 'input',
+            name: 'engineerId',
+            message: "Enter the engineer's id"
+        },
+        {
+            type: 'input',
+            name: 'engineerEmail',
+            message: "Enter engineer's email"
+        },
+        {
+            type: 'input',
+            name: 'engineerGithub',
+            message: "Enter engineer's github account"
+        }
+    ])
+    .then(answers => {
+        console.log('Answers:', answers);
+        const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
+        teanMembers.push(engineer);
+        idArray.push(answers.engineerId);
+        createTeam();
+    });
 }
