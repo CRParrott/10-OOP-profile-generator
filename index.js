@@ -56,10 +56,10 @@ function createTeam() {
     ]).then(selectedRole => {
         switch (selectedRole.teamRole) {
             case "Engineer":
-                addEngineer();
+                createEngineer();
                 break;
             case "Intern":
-                addIntern();
+                createIntern();
                 break;
             default:
                 createTeam();
@@ -97,6 +97,40 @@ function createEngineer() {
         const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
         teanMembers.push(engineer);
         idArray.push(answers.engineerId);
+        createTeam();
+    });
+}
+
+function createIntern() {
+
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'internName',
+            message: "Enter intern's name"
+        },
+        {
+            type: 'input',
+            name: 'internId',
+            message: "Enter intern's id"
+        },
+        {
+            type: 'input',
+            name: 'internEmail',
+            message: "Enter intern's name"
+        },
+        {
+            type: 'input',
+            name: 'internSchool',
+            message: "Enter intern's school"
+        }
+
+    ])
+    .then(answers => {
+        console.log('Answer', answers);
+        const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+        teamMembers.push(intern);
+        idArray.push(answers.internId);
         createTeam();
     });
 }
