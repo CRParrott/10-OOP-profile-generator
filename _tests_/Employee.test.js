@@ -7,11 +7,11 @@ describe("Employee class", () => {
         expect(new Employee(employee)).toBe("object");
     });
 
-    describe("const name")
+    describe("const name", () => {
         it("Can enter name through the constructor argument", () => {
-        const testName = "Charles";
-        const employee = new Employee(testName);
-        expect(employee.name).toBe(testName);
+            const testName = "Charles";
+            const employee = new Employee(testName);
+            expect(employee.name).toBe(testName);
         });
     });
 
@@ -62,3 +62,4 @@ describe("Employee class", () => {
             expect(employee.getRole()).toBe(testRole);
         });
     });
+});
