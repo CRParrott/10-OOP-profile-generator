@@ -1,5 +1,5 @@
-const Employee = require("../lib/Employee");
 const Manager = require ("../lib/Manager");
+const Employee = require("../lib/Employee");
 
 describe("Manager Class", () => {
     it ("Initiates a new manager selection", () => {
