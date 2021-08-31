@@ -4,6 +4,7 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const path = require("path");
+const { fstat } = require("fs");
 
 function createManager() {
     console.log("Enter your team");
@@ -133,4 +134,12 @@ function createIntern() {
         idArray.push(answers.internId);
         createTeam();
     });
+}
+
+function createTeam() {
+
+    if (!fstat.existsSync(OUTPUT_DIR)) {
+        fstat.mkdirSync(OUTPUT_DIR)
+    }
+    fstat.writeFileSync(outputPath, render(teamMembers), "utf-8");
 }
