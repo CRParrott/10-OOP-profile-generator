@@ -2,7 +2,7 @@ const Employee = require("../lib/Employee");
 const Engineer = require ("../lib/Employee");
 
 describe("Engineer Class", () => {
-    it ("Initiates a new engineer input", () => {
+    it ("Initiates a new engineer selection", () => {
         const engineer = new Engineer();
         expect(new Engineer(engineer)).toBe("object");
     });
