@@ -12,7 +12,6 @@ const outputPath = path.join(OUTPUT_DIR, "teampage.html");
 const render = require("./src/team-template.js");
 
 const teamMembers = [];
-const idGroup = [];
 
 
 function appMenu() {
