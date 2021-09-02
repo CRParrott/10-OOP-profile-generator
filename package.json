@@ -1,0 +1,29 @@
+{
+    "name": "profile-generator",
+    "version": "1.0.0",
+    "description": "OOP and testing homework",
+    "main": "app.js",
+    "directories": {
+      "lib": "lib",
+      "test": "test"
+    },
+    "scripts": {
+      "test": "jest --verbose test/*"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/CRParrott/10-OOP-profile-generator.git"
+      },
+      "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CRParrott/10-OOP-profile-generator.git"
+  },
+  "homepage": "https://github.com/CRParrott/10-OOP-profile-generator.git",
+  "dependencies": {
+    "inquirer": "^6.3.1"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
