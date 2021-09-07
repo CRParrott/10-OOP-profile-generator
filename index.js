@@ -12,6 +12,7 @@ const outputPath = path.join(OUTPUT_DIR, "teampage.html");
 const render = require("./src/team-template.js");
 
 const teamMembers = [];
+const idArray = [];
 
 
 function appMenu() {
@@ -34,16 +35,14 @@ function appMenu() {
             {
                type: 'input',
                name: 'managerEmail',
-               message: "Enter the manager's email", 
+               message: "Enter the manager's email:", 
             },
             {
                 type: 'input',
                 name: 'managerOfficeNumber',
-                message: "Enter the manager's office number"
+                message: "Enter the manager's office number:"
             }
-        ])
-        .then(answers => {
-            console.log('Answer:', answers);
+        ]).then(answers => {
             const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
             teamMembers.push(manager);
             idArray.push(answers.managerId);
@@ -106,7 +105,7 @@ function appMenu() {
         .then(answers => {
             console.log('Answers:', answers);
             const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
-            teanMembers.push(engineer);
+            teamMembers.push(engineer);
             idArray.push(answers.engineerId);
             createTeam();
         });
