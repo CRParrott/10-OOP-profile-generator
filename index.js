@@ -55,7 +55,7 @@ function appMenu() {
         inquirer.prompt([
             {
                 type: 'list',
-                name: 'teamRole',
+                name: "teamRole",
                 message: "Please select engineer, intern, or no additional team members",
                 choices: [
                     "Engineer",
