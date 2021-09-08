@@ -36,7 +36,7 @@ describe("getId", () => {
     it("Can enter id through getId()", () => {
         const testId = 81;
         const employee = new Employee("Charles", testId);
-        expect(employee.getID()).toBe(testId);
+        expect(employee.getId()).toBe(testId);
     });
 });
 

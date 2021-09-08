@@ -11,17 +11,12 @@ SO THAT I have quick access to their emails and GitHub profiles
 ## Functionality
 
 ```md
-Run node index.js to initiate team creation
+Run "npm run test" to initiate the tests
+Run "node index" to initiate team creation
 ```
 
-## Node index.js
+## Video run through
 
-The following gif shows an example of running node index to launch the team creation questions and functionality:
+The following video shows an example of running "npm run test" then "node index" to launch the team creation questions and create an html page to display employees:
 
-![Node index gif.](./Assets/team-generator.gif)
-
-## Running tests
-
-The following gif shows an example of running tests, enter "npm run test" to initiate
-
-![NPM run test.](./Assets/run-test.gif)
+![Video run through.](./Assets/ScreenRecord.mp4) https://drive.google.com/file/d/1p7lnsq5QtDryDptesW4XlAZ89qflGT4M/view
